@@ -3,6 +3,10 @@
   margin: 0px;
   box-sizing: border-box; }
 
+html, body {
+  margin: 0px;
+  padding: 0px; }
+
 @font-face {
   font-family: 'sans-bold';
   src: url("../fonts/sans-bold.woff2"); }

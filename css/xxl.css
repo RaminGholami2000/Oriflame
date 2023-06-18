@@ -735,7 +735,7 @@
     color: #80cdd0 !important; }
   .up {
     position: relative;
-    width: 100%;
+    max-width: 600px;
     text-align: center;
     padding: 20px; }
     .up > div:nth-of-type(1) {
@@ -755,6 +755,7 @@
     .down > .left {
       position: relative; }
       .down > .left > img {
+        width: 100%;
         border-radius: 5px;
         max-width: 600px;
         cursor: pointer; }
@@ -810,6 +811,8 @@
     margin-top: 10px; }
   div.new > div.down > div.right > div:nth-of-type(3) > p:nth-of-type(3) {
     margin-top: 27px; }
+  div.new > div.down > div.right > div:nth-of-type(3) > div.rating {
+    margin-top: 33px; }
   div.best-offer {
     width: 100%;
     padding: 5px;
@@ -1111,25 +1114,29 @@
     position: relative;
     top: 1200px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  div.customer > div.svg-text {
+    display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap; }
-  div.customer > div {
+    align-items: baseline; }
+  div.customer > div.svg-text > div {
     width: 420px;
     padding: 15px;
     text-align: center; }
-  div.customer > div > span.fa-truck {
+  div.customer > div.svg-text > div > span.fa-truck {
     font-size: 35px;
     color: black; }
-  div.customer > div > p:nth-of-type(1) {
+  div.customer > div.svg-text > div > p:nth-of-type(1) {
     font-family: "sans-bold";
     font-size: 25px;
     color: black; }
-  div.customer > div > p:nth-of-type(2) {
+  div.customer > div.svg-text > div > p:nth-of-type(2) {
     font-family: "sans-regular";
     font-size: 15px;
     color: black; }
-  div.customer > div > span.fa-gift {
+  div.customer > div.svg-text > div > span.fa-gift {
     font-size: 35px;
     color: black; }
   div.customer > a {
@@ -1143,11 +1150,8 @@
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 16px;
-    text-transform: uppercase;
-    position: relative;
-    bottom: 0px;
-    left: 620px; }
-  div.customer > div > span.fa-comment-heart {
+    text-transform: uppercase; }
+  div.customer > div.svg-text > div > span.fa-comment-heart {
     font-size: 35px;
     color: black; }
   div.diffrent {
@@ -1164,7 +1168,7 @@
     font-size: 15px;
     font-family: "sans-regular";
     margin: 0px auto; }
-  hr {
+  hr:nth-of-type(1) {
     width: 150px;
     height: 2px;
     display: block;
@@ -1177,12 +1181,19 @@
   div.top-brands {
     width: 100%;
     height: 350px;
-    padding: 15px;
     position: relative;
     top: 1400px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center; }
+  div.top-brands > div.brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; }
   div.top-brands > h1 {
     width: 100%;
     padding: 5px;
@@ -1191,18 +1202,18 @@
     font-family: "sans-bold";
     position: absolute;
     top: 0px; }
-  div.top-brands > div {
+  div.top-brands > div.brand > div {
     width: 150px;
     height: 150px;
     border-radius: 75px;
     margin-left: 20px; }
-  div.top-brands > div > a {
+  div.top-brands > div.brand > div > a {
     width: 100%;
     height: 100%;
     border-radius: 75px;
     text-align: center;
     line-height: 150px; }
-  div.top-brands > div > a > img {
+  div.top-brands > div.brand > div > a > img {
     width: 100%;
     height: 100%;
     border-radius: 75px; }
@@ -1220,18 +1231,23 @@
     text-transform: uppercase;
     font-family: "sans-regular";
     position: absolute;
-    bottom: 0px; }
-  div.video {
+    bottom: 0px;
+    display: block; }
+  div.video-lg {
+    display: none; }
+  div.video-xl {
+    display: none; }
+  div.video-xxl {
     width: 100%;
-    height: 600px;
+    height: 950px;
     position: relative;
-    top: 1500px;
+    top: 1400px;
     left: 0px;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center; }
-  div.video > a {
+  div.video-xxl > a {
     background-color: transparent;
     border: 1px solid black;
     color: black;
@@ -1486,4 +1502,14 @@
     text-transform: uppercase;
     font-weight: bolder; }
   .box-shadow {
-    box-shadow: 5px 10px 10px black; } }
+    box-shadow: 5px 10px 10px black; }
+  .remove {
+    display: none !important; }
+  div.holder {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+    backdrop-filter: blur(15px);
+    z-index: 99999999999999999999;
+    display: none; } }

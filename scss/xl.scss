@@ -3,7 +3,6 @@
       width: 100%;
       height: 80px;
       position: fixed;
-      background-color: white;
       z-index:999999999999999;
     }
     div.header > nav {
@@ -143,7 +142,7 @@
     align-items: baseline;
     flex-direction: column;
     border-right:1px solid rgba(128, 128, 128, 0.466);
-  
+      list-style: none;
     }
     div.fullscreen-menu>ul>li{
       width: 250px;
@@ -630,8 +629,7 @@
     align-items: center;
   }
   div.our-story>div.text>p{
-      width: 452px;
-      height: 325px;
+     
       margin-left: 10px;
       transition: 300ms;
       font-size: 35px;
@@ -684,8 +682,6 @@
     align-items: center;
   }
   div.join-us>div.text>p{
-    width: 680px;
-    height: 325px;
     margin-left: 15px;
     transition: 300ms;
     font-size: 35px;
@@ -730,6 +726,8 @@
   .swiper {
     width: 100%;
     height: 100%;
+    position: relative;
+    top: 120px;
   }
   
   .swiper-slide {
@@ -753,7 +751,7 @@
       background-color: #278986ce;
       z-index: 2;
       position: absolute;
-      top: 80px;
+      top: 120px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -780,6 +778,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: nowrap;
     }
     div.second-menu > a {
       flex-grow: 1;
@@ -800,7 +799,7 @@
       width: 100%;
       padding: 20px;
       position: relative;
-      top: 50px;
+      top: 140px;
       right: 0px;
       left: 0px;
       display: flex;
@@ -808,6 +807,7 @@
       justify-content: center;
       align-items: center;
       gap: 20px;
+      flex-wrap: nowrap;
   
     }
     div.new > div.header-new {
@@ -845,10 +845,7 @@
       border-radius: 16px;
       border: 1px solid black;
       color: black;
-      -webkit-border-radius: 16px;
-      -moz-border-radius: 16px;
-      -ms-border-radius: 16px;
-      -o-border-radius: 16px;
+     
 }
   @mixin typo($color, $size, $weight, $family) {
     color: $color;
@@ -899,6 +896,7 @@
     font-size: 20px;
     overflow: hidden;
   }
+
   .rating input {
     float: right;
     opacity: 0;
@@ -952,49 +950,48 @@
   .down {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: start;
-    column-gap: 20px;
+    column-gap: 10px;
     > .left {
+      max-width: 570px;
       position: relative;
       > img {
+
         border-radius: 5px;
-        max-width: 600px;
-        cursor: pointer;
+        width:100%;
+        cursor: pointer; 
       }
       > button {
         position: absolute;
-        width: 230px;
+        width: 240px;
         bottom: 30px;
         left: 50%;
         transform: translateX(-115px);
         z-index: 9999;
-   
   }
     }
     > .right {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: center;
-      align-items: baseline;
-      flex-grow: 2;
-      column-gap: 20px;
+      align-items: start;
+      gap: 5px;
       font-family: "sans-rgular";
       color: gray;
       > div {
-        max-width: 234px;
+        max-width: 224px;
         overflow: hidden;
         > .bg-image {
-          overflow: hidden;
+          width: 100%;
           position: relative;
-          height: 234px;
           cursor: pointer;
           &:hover img {
             transform: scale(1.1, 1.1);
    
   }
           img {
-            max-width: 234px;
+            max-width: 224px;
             border-radius: 5px;
             transition: 500ms;
        
@@ -1038,6 +1035,9 @@
   div.new>div.down>div.right>div:nth-of-type(3)>p:nth-of-type(3){
     margin-top: 27px;
   }
+  div.new>div.down>div.right>div:nth-of-type(3)>div.rating{
+    margin-top: 33px;
+  }
   div.best-offer {
     width: 100%;
     padding: 5px; 
@@ -1046,7 +1046,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
-    gap: 50;
+    gap: 50px;
+    position: relative;
+    top: 150px;
   }
   div.best-offer>div.header-best{
   width: 55%;
@@ -1071,13 +1073,14 @@
     width: 100%;
     padding: 5px;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: space-between;
-    flex-direction: row;
+    align-items: center;
+    gap: 20px;
   }
   div.best-offer>div.product>div:nth-of-type(2){
   width: 500px;
-    position: relative;
-    top: -60px;
+    height: 450px;
   }
   div.best-offer>div.product>div>div.circle{
     width: 450px;
@@ -1088,10 +1091,7 @@
     right: 0px;
     z-index: 1 !important;
     display: inline-block;
-    -webkit-border-radius: 225px;
-    -moz-border-radius: 225px;
-    -ms-border-radius: 225px;
-    -o-border-radius: 225px;
+ 
   }
   div.best-offer>div.product>div>div.image-best{
     width: 450px;
@@ -1123,14 +1123,6 @@
    text-align: center;
    line-height: 50px;
    transition: 300ms;
-   -webkit-border-radius: 30px;
-   -moz-border-radius: 30px;
-   -ms-border-radius: 30px;
-   -o-border-radius: 30px;
-   -webkit-transition: 300ms;
-   -moz-transition: 300ms;
-   -ms-transition: 300ms;
-   -o-transition: 300ms;
   }
   div.best-offer>div.product>div>div.image-best>a:hover{
     background-color: #0000003d;
@@ -1141,12 +1133,10 @@
   flex-grow: 2;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap:nowrap;
       justify-content: center;
       align-items: baseline;
       margin-top: 55px;
-      overflow-x: hidden;
-      overflow-y: hidden;
   }
   div.best-offer>div.product>div:nth-of-type(1)>div{
   flex-grow: 1;
@@ -1219,7 +1209,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 50px;
+      position: relative;
+      top: 180px;
     }
     div.season > div.image-season {
       width: 683px;
@@ -1265,6 +1256,8 @@
     div.Astaxanthin {
       width: 100%;
       padding: 20px; 
+      position: relative;
+      top: 320px;
       
     }
     div.Astaxanthin>div.header-text{
@@ -1307,10 +1300,7 @@
         border: 1px solid black;
         text-transform: uppercase;
         color: black;
-        -webkit-border-radius: 16px;
-        -moz-border-radius: 16px;
-        -ms-border-radius: 16px;
-        -o-border-radius: 16px;
+      
   }
     
     div.edit {
@@ -1393,37 +1383,41 @@
       background-color: #d6d3f8;
       position: relative;
       top: 1700px;
-      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    div.customer>div.svg-text{
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      flex-wrap: wrap;
     }
-    div.customer > div {
-      width: 420px;
+    div.customer>div.svg-text > div {
+      width: 280px;
       padding: 15px;
       
       text-align: center;
     }
-    div.customer > div > span.fa-truck {
+    div.customer>div.svg-text> div > span.fa-truck {
       font-size: 35px;
       color: black;
     }
-    div.customer > div > p:nth-of-type(1) {
+    div.customer>div.svg-text > div > p:nth-of-type(1) {
       font-family: "sans-bold";
       font-size: 25px;
       color: black;
     }
-    div.customer > div > p:nth-of-type(2) {
+     div.customer>div.svg-text> div > p:nth-of-type(2) {
       font-family: "sans-regular";
       font-size: 15px;
       color: black;
     }
-    div.customer > div > span.fa-gift {
+     div.customer>div.svg-text> div > span.fa-gift {
       font-size: 35px;
       color: black;
     }
-    div.customer > a {
+     div.customer> a {
       background-color: transparent;
       border: 1px solid black;
       color: black;
@@ -1435,11 +1429,9 @@
       cursor: pointer;
       border-radius: 16px;
       text-transform: uppercase;
-      position:relative;
-      bottom: 0px;
-      left: 520px;
+
     }
-    div.customer > div > span.fa-comment-heart {
+     div.customer>div.svg-text> div > span.fa-comment-heart {
       font-size: 35px;
       color: black;
     }
@@ -1460,7 +1452,7 @@
       font-family: "sans-regular";
       margin: 0px auto;
     }
-    hr {
+    hr:nth-of-type(1) {
       width: 150px;
       height: 2px;
       display: block;
@@ -1474,12 +1466,21 @@
     div.top-brands {
       width: 100%;
       height: 350px;
-      padding: 15px;
       position: relative;
       top: 1800px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+  
+    }
+    div.top-brands>div.brand{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
     }
     div.top-brands > h1 {
       width: 100%;
@@ -1491,20 +1492,20 @@
       top: 0px;
       
     }
-    div.top-brands > div {
+    div.top-brands>div.brand > div {
       width: 150px;
       height: 150px;
       border-radius: 75px;
       margin-left: 20px;
     }
-    div.top-brands > div > a {
+    div.top-brands>div.brand > div > a {
       width: 100%;
       height: 100%;
       border-radius: 75px;
       text-align: center;
       line-height: 150px;
     }
-    div.top-brands > div > a > img {
+    div.top-brands>div.brand > div > a > img {
       width: 100%;
       height: 100%;
       border-radius: 75px;
@@ -1524,8 +1525,15 @@
       font-family: "sans-regular";
       position: absolute;
       bottom: 0px;
+      display: block;
     }
-    div.video {
+    div.video-xxl{
+      display: none;
+    }
+    div.video-lg{
+      display: none;
+    }
+    div.video-xl {
       width: 100%;
       height: 600px;
       position: relative;
@@ -1536,7 +1544,7 @@
       justify-content: center;
       align-items: center;
     }
-    div.video > a {
+    div.video-xl > a {
       background-color: transparent;
       border: 1px solid black;
       color: black;
@@ -1553,10 +1561,11 @@
       bottom: 0px;
     }
     div.standards {
-      width: 100%;
+      width:95%;
       height: 550px;
       position: relative;
       top: 1900px;
+      left: 0px;
     }
     div.standards > div.header-standards {
       width: 100%;
@@ -1570,7 +1579,6 @@
       font-family: "sans-bold";
     }
     div.standards > div.header-standards > p {
-      width: 550px;
       font-size: 13px;
       font-family: "sans-regular";
       margin: 0px auto;
@@ -1737,7 +1745,6 @@
   
   }
   div.footer>footer>div.footer-end>p{
-    width: 850px;
     text-align: center;
   }
   div.footer>footer>div.footer-end>div>a{
@@ -1858,5 +1865,14 @@
      font-weight: bolder;
     
    }
+   div.holder{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+    backdrop-filter: blur(15px);
+    z-index: 99999999999999999999;
+  display: none;
+  }
 }
   
