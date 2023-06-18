@@ -1232,7 +1232,6 @@
     position: relative;
     top: 1900px;
     left: 0px;
-    background-color: red;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1250,7 +1249,6 @@
     border-radius: 16px;
     text-transform: uppercase;
     font-family: "sans-regular";
-    background-color: yellow;
     font-size: 15px; }
   div.standards {
     width: 100%;
